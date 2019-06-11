@@ -142,6 +142,8 @@ while not haGanado(tablero):
     #Pintamos tablero
     pintarTablero(tablero)
     print("Esperando movimiento Player1")
+    #Esperamos 2 segundos para "DAR TENSION" :P
+    time.sleep(2)
     
     if(player1=="CPU"):
         # Juega la maquina, con turno 1
@@ -158,9 +160,7 @@ while not haGanado(tablero):
             print("Ganador humano Player 1")
             exit()
 
-    #Esperamos 2 segundos para "DAR TENSION" :P
-    time.sleep(2)
-    
+  
     #Sumaamos un turno
     nTurnos=nTurnos+1
 
