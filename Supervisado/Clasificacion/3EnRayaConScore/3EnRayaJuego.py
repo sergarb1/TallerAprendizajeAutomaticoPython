@@ -165,7 +165,7 @@ while not haGanado(tablero):
     nTurnos=nTurnos+1
 
     #Caso empate por turnos agotados 
-    if(nTurnos==8):
+    if(nTurnos==9):
         print("Empate")
         exit()
     
@@ -190,7 +190,7 @@ while not haGanado(tablero):
     
     nTurnos=nTurnos+1 
     #Caso empate por turnos agotados
-    if(nTurnos==8):
+    if(nTurnos==9):
         print("Empate")
         exit()
     

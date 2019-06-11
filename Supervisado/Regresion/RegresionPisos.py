@@ -22,4 +22,4 @@ for i in range(50,200,10):
     print("Piso de "+str(i)+" metros")
     print("Predecimos precio:")
     precioPred = lr.predict([[i]])
-    print(int(precioPred)+ " Euros")
+    print(str(precioPred)+ " Euros")
