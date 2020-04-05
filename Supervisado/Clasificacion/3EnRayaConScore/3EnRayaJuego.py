@@ -91,8 +91,6 @@ def jugarHumano(turno):
     
     tablero[num]=turno
     return
-        
-
 
 #MAIN
 
@@ -136,13 +134,15 @@ if(num==2):
 else:
     player2="HUMANO"
 
+#Pintamos el tablero antes de empezar la partida
+pintarTablero(tablero)
 
 #Mientras no haya un ganador, jugamos
 while not haGanado(tablero):
     #Pintamos tablero
-    pintarTablero(tablero)
     print("Esperando movimiento Player1")
-    
+    #Esperamos 2 segundos para "DAR TENSION" :P
+    time.sleep(3)
     if(player1=="CPU"):
         # Juega la maquina, con turno 1
         jugarMaquina(1);
@@ -158,8 +158,7 @@ while not haGanado(tablero):
             print("Ganador humano Player 1")
             exit()
 
-    #Esperamos 2 segundos para "DAR TENSION" :P
-    time.sleep(2)
+
     
     #Sumaamos un turno
     nTurnos=nTurnos+1
@@ -170,7 +169,7 @@ while not haGanado(tablero):
         exit()
     
     print("Esperando movimiento Player2")
-    time.sleep(2)
+    time.sleep(3)
 
     if(player2=="CPU"):
         # Juega la maquina, con turno 2
