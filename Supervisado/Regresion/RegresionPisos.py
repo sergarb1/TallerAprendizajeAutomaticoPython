@@ -2,6 +2,11 @@
 
 #incluiamos de sklearn modelos lineal
 from sklearn import linear_model
+#Biblioteca para usar JSON
+import json
+# Biblioteca para importar/exportar el modelo entrenado
+import joblib
+
 
 #Ejemplos de entrenamiento
 # Caracteristicas (metrosPiso)
@@ -17,9 +22,13 @@ lr = linear_model.LinearRegression()
 #Entrenamos el modelo de regresion linea
 lr.fit(metrosPisos,precioPisos)
 
+#Salvamos el modelo entrenado
+joblib.dump(lr, 'modeloRegresion.pkl') 
+
 #Probamos con rangos desde 50 a 200 de 10 en 10 e intentamos predecir precio
 for i in range(50,200,10):
     print("Piso de "+str(i)+" metros")
     print("Predecimos precio:")
     precioPred = lr.predict([[i]])
-    print(str(precioPred)+ " Euros")
+    print(str(int(precioPred[0][0]))+ " Euros")
+
