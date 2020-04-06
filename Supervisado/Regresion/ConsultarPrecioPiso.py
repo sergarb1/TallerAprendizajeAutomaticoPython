@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #incluiamos de sklearn modelos lineal
 from sklearn import linear_model
 #Biblioteca para usar JSON
@@ -7,7 +8,7 @@ import joblib
 
 
 #Cargamos el modelo de regresion lineal
-lr = joblib.load('modeloRegresion.pkl') 
+lr = joblib.load('modeloRegresion.pkl')
 
 while(True):
     print("Introduzca los metros de su piso:")
