@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+#pip3 install opencv-python pillow tensorflow cvlib
 import cv2
 
 # Enable camera
